@@ -1,0 +1,50 @@
+
+<div>
+
+    <div class="twelve wide column">
+                    <a class="ui large header" href="{{ article.link }}">
+                      {{ article.title }}
+                    </a>
+                    
+      <div class="ui fluid image large">
+        <img src="{{ article.image }}" alt="">
+      </div>
+
+      <div class="meta date">
+        {{ article.publishedAt | date: 'medium' }}
+      </div>
+      <div class="meta description">
+        <p>{{ article.description }}</p>
+      </div>
+      <div class="extra">
+        <a 
+          href="{{ article.link }}"
+          target="_blank"
+          class="ui right floated button primary">
+        Read more 
+        <i class="right chevron icon"></i>  
+      </a>
+      </div>
+            <span class="ui blue small label">
+              <i class="heart icon"></i>
+              <div class="detail">
+                {{ article.votes }}
+              </div>
+            </span>
+          <span class="ui right floated">
+              <a (click)="upvote()"
+              class="ui small label">
+                <i class="arrow up icon"></i>
+                upvote
+              </a>
+              <a (click)="downvote()"
+               class="ui small label">
+                <i class="arrow down icon"></i>
+                downvote
+              </a>
+          </span>
+
+    </div>
+</div>
+
+<div class="ui divider"></div>

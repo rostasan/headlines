@@ -1,0 +1,22 @@
+<!-- <h1>
+  <a href="https://www.codementor.io/christiannwamba/build-custom-directives-in-angular-2-jlqrk7dpw">This is cool</a>
+</h1>
+<form class="ui large form segment">
+  <h3 class="ui header" [style.color]="'blue'">Add a Link</h3>
+  <div class="field">
+    <label for="title">Title:</label>
+    <input name="title" #newtitle>
+  </div>
+  <div class="field">
+    <label for="link">Link:</label>
+    <input name="link" #newlink>
+  </div>
+  <button (click)="addArticle(newtitle, newlink)" class="ui positive right floated button">
+    Submit Link
+  </button>
+</form> -->
+<h1>Headlines</h1>
+
+<div class="ui divided items">
+    <app-article *ngFor="let article of articles" [article]="article" class='item'></app-article>
+</div>
